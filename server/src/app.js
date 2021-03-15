@@ -11,4 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors())
 
+app.post('/register', (req, res) => {
+    res.send({
+        message: `Hello ${req.body.email}! You are registered sucesfully.`
+    })
+})
+
 app.listen(process.env.PORT || 8081)
