@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h2>Register Component</h2>
+    <h2>Login Component</h2>
     <input type="email" v-model="email" name="email" placeholder="email" />
     <br />
     <input
@@ -11,7 +11,7 @@
     />
     <br />
     <div v-html="error" class="error"></div>
-    <button @click="register">Register</button>
+    <button @click="login">Login</button>
   </div>
 </template>
 
@@ -27,9 +27,9 @@ export default {
     };
   },
   methods: {
-    async register() {
+    async login() {
       try {
-        const response = await AuthenticationService.register({
+        const response = await AuthenticationService.login({
           email: this.email,
           password: this.password,
         });

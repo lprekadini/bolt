@@ -15,6 +15,7 @@ app.use(cors());
 
 require('./routes')(app)
 
+// put {force: true} inside .sync( 'here' ) to delete all db
 sequelize.sync().then(() => {
   app.listen(config.port);
   console.log(`Server started on port ${config.port}`)

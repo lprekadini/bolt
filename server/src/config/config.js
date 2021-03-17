@@ -9,5 +9,8 @@ module.exports = {
             host: process.env.HOST || 'localhost',
             storage: './bolt.sqlite'
         }
+    },
+    authenticantion: {
+        jwtSecret: process.env.JWT_SECRET || 'secret'
     }
 }
